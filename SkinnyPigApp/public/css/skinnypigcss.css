@@ -1,0 +1,495 @@
+/*colors:
+Brown:#534741
+Pink:#edc1bf*/
+
+/*font-family: 'Oswald', sans-serif;
+font-family: 'Esteban', serif;*/
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: transparent;
+    color: #edc1bf;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-color: transparent;
+    color: #edc1bf;
+}
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin: 5px 0px;
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #edc1bf;
+    color: #534741;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #edc1bf;
+    color: #534741;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 0px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+.navbar-toggle {
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    float: right;
+    margin-bottom: 8px;
+    margin-right: 15px;
+    margin-top: 10px;
+    padding: 12px 10px;
+    position: relative;
+    z-index: 10;
+}
+
+    .navbar-default .navbar-toggle {
+    border-color: white;
+}
+
+    .navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.categoryTitle {
+    color: #534741;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    padding: 0px 10px 0px 0px;
+}
+
+.btn-default {
+    background-color: #fff;
+    border-color: #ccc;
+    color: #333;
+    font-family: 'oswald', sans-serif;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.floatRight {
+    float: right;
+}
+
+.navbar-form {
+    -webkit-box-shadow: none;
+    background: #edc1bf;
+    border: 0;
+    box-shadow: none;
+    font-family: 'Oswald', Sans-Serif;
+    font-size: 12px;
+    margin: 0px;
+    padding: 6px 15px;
+    width: auto;
+}
+
+.navbarMain {
+    background-color: #edc1bf;
+    background-image: url(https://i.imgur.com/40d4k2f.png);
+    min-height: 50px;
+    position: relative;
+}
+
+.navbarSecondary {
+    background-color: #534741;
+    background-image: url(https://i.imgur.com/40d4k2f.png);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    min-height: 50px;
+    position: relative;
+}
+
+.navbarSecondary-right {
+    float: right !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    font-family: 'Oswald', Sans-Serif;
+    font-size: 16px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: white;
+}
+
+.headerimg {
+    height: 150px;
+    opacity: 0.6;
+    position: relative;
+    width: auto;
+}
+
+.headerLogo {
+    float: left;
+    left: 7px;
+    position: relative;
+    width: 20%;
+}
+
+.navbar-form .form-control {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dealBtn-Primary {
+    background-color: #534741;
+    color: #edc1bf;
+    display: block;
+    font-family: 'Esteban', serif;
+    font-size: 16px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.headContainer {
+    overflow: hidden
+}
+
+.btn:hover, .btn:focus, .btn.focus {
+    color: white;
+    text-decoration: none;
+    background: #534741;
+}
+
+.price {
+    color: green;
+    font-family: 'Esteban', serif;
+    font-size: 16px;
+    padding: 10px 12px 10px 0px;
+    text-align: right;
+}
+
+.dealofDayPrice {
+    color: green;
+    font-family: 'Esteban', serif;
+    font-size: 24px;
+    padding: 10px 15px 10px 5px;
+    text-align: right;
+}
+
+.oldPrice {
+    color: black;
+    float: left;
+    font-family: 'Esteban', serif;
+    font-size: 12px;
+    opacity: 0.8;
+    padding: 0px 0px 0px 10px;
+    text-decoration: line-through;
+    vertical-align: text-bottom;
+}
+
+.dealOfDayOldPrice {
+    color: black;
+    float: left;
+    font-family: 'Esteban', serif;
+    font-size: 16px;
+    opacity: 0.8;
+    padding: 0px 0px 0px 10px;
+    text-decoration: line-through;
+    vertical-align: text-bottom;
+}
+
+.productTitle {
+    font-family: 'Esteban', serif;
+    font-size: 17px;
+    padding: 10px;
+    text-align: left;
+    height:100px;
+    padding-top:8%;
+    line-height:19px;
+}
+
+.productImage {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    height: 158px;
+}
+
+#dealofDayImage {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    height: auto;
+}
+
+.productThumbnail {
+    -o-transition: border .2s ease-in-out;
+    -webkit-transition: border .2s ease-in-out;
+    background-color: #fff;
+    background-color: rgba(220,220,220,0.2);
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: block;
+    line-height: 1.42857143;
+    margin-bottom: 10px;
+    padding: 4px;
+    transition: border .2s ease-in-out;
+}
+
+.categoryThumbnail {
+    -o-transition: border .2s ease-in-out;
+    -webkit-transition: border .2s ease-in-out;
+    background-color: #fff;
+    background-color: rgba(220,220,220,0.2);
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: block;
+    line-height: 1.42857143;
+    margin-bottom: 20px;
+    padding: 4px;
+    transition: border .2s ease-in-out;
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.productThumbnail > img, .productThumbnail a > img, .categoryThumbnail > img {
+    display: block;
+    height: 158px;
+    max-width: 100%;
+    padding: 5px;
+}
+
+.categoryBox {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+    margin-bottom: 85px;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.productBox {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    position: relative;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+
+.dealOfDayProductBox {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    position: relative;
+}
+
+.footer {
+    background-image: url(https://i.imgur.com/40d4k2f.png);
+    border-top: 4px solid #edc1bf;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.footer a i {
+    color: #edc1bf;
+    font-size: 35px;
+    padding: 25px;
+}
+
+.footer a i:hover {
+    color: white;
+}
+
+/*Media Queries*/
+
+@media screen and (min-width: 992px) {
+
+    .logoBrand {
+        color: white;
+        display: block;
+        font-family: "Galada", serif;
+        position: relative;
+        text-align: center;
+        z-index: 9;
+        padding: 10px 15px;
+        float: left;
+    }
+
+    .headerLogo {
+        float: left;
+        left: 7px;
+        position: relative;
+        width: 25%;
+    }
+
+    .navbar-form {
+        -webkit-box-shadow: none;
+        background: #edc1bf;
+        border: 0;
+        box-shadow: none;
+        font-family: 'Oswald', Sans-Serif;
+        font-size: 12px;
+        text-align: right;
+        width: 100%;
+    }
+
+    .navbar-form .form-control {
+        display: inline-block;
+        vertical-align: middle;
+        width: 300px;
+    }
+
+    .headerimg {
+        height: auto;
+        opacity: 0.6;
+        width: 100%;
+        left: 0;
+    }
+
+    .dealOfDayProductBox {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 10px;
+        position: relative;
+    }
+
+    .navbarMain {
+        background-color: #edc1bf;
+        background-image: url(https://i.imgur.com/40d4k2f.png);
+        min-height: 50px;
+        position: relative;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar-form {
+        -webkit-box-shadow: none;
+        background: #edc1bf;
+        border: 0;
+        box-shadow: none;
+        font-family: 'Oswald', Sans-Serif;
+        font-size: 12px;
+        margin: 0px;
+        padding: 6px 15px;
+        width: auto;
+    }
+
+    .navbarMain {
+        background-color: #edc1bf;
+        background-image: url(https://i.imgur.com/40d4k2f.png);
+        position: relative;
+    }
+
+    .navbar-toggle {
+        background-color: transparent;
+        background-image: none;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        float: right;
+        margin-bottom: 8px;
+        margin-right: 15px;
+        margin-top: 5px;
+        padding: 12px 10px;
+        position: relative;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: white;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: white;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: white;
+    }
+
+    .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .form-control {
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        background-color: #fff;
+        background-image: none;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        color: #555;
+        display: block;
+        font-size: 14px;
+        height: 34px;
+        line-height: 1.42857143;
+        padding: 6px 12px;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        width: 77%;
+    }
+
+    .header {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .logoBrand {
+        color: white;
+        display: block;
+        font-family: "Galada", serif;
+        font-size: 24px;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        top: 20px;
+        z-index: 9;
+        width: 300px;
+    }
+
+    .headerimg {
+        height: 150px;
+        opacity: 0.6;
+        position: relative;
+        width: auto;
+    }
+
+}
+
+/*End of Media Queries*/
