@@ -153,7 +153,7 @@
 									<img src= "<%=data.items[i].imageUrl%>" alt="..." class="center-block">
 									<div class="caption">
 										<div class="price">
-											<span class="oldPrice">$399.99</span>$199.99</div>
+											<span class="oldPrice"><%=data.items[i].originPrice%></span>$<%=data.items[i].price.toFixed(2)%></div>
 										<p>
 											<a href="#" class="btn dealBtn-Primary" role="button">View Deal</a>
 										</p>
