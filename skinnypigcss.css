@@ -26,14 +26,23 @@ font-family: 'Esteban', serif;*/
     height: auto;
     max-width: 100%;
 }
+
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: #edc1bf;
-    color: white;
+    color: #534741;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #edc1bf;
     color: #534741;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 0px 15px;
+    font-size: 18px;
+    line-height: 20px;
 }
 
 
@@ -100,7 +109,6 @@ font-family: 'Esteban', serif;*/
 .navbarMain {
     background-color: #edc1bf;
     background-image: url(https://i.imgur.com/40d4k2f.png);
-    border-bottom: 4px solid white;
     min-height: 50px;
     position: relative;
 }
@@ -296,7 +304,7 @@ font-family: 'Esteban', serif;*/
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: -130px 15px 20px 15px;
+    margin: 10px 0px 10px 0px;
     padding: 10px;
     position: relative;
 }
@@ -370,7 +378,6 @@ font-family: 'Esteban', serif;*/
         background-color: white;
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin: -200px 15px 20px 15px;
         padding: 10px;
         position: relative;
     }
@@ -378,7 +385,6 @@ font-family: 'Esteban', serif;*/
     .navbarMain {
         background-color: #edc1bf;
         background-image: url(https://i.imgur.com/40d4k2f.png);
-        border-bottom: 4px solid white;
         min-height: 50px;
         position: relative;
     }
@@ -413,7 +419,7 @@ font-family: 'Esteban', serif;*/
         float: right;
         margin-bottom: 8px;
         margin-right: 15px;
-        margin-top: 10px;
+        margin-top: 5px;
         padding: 12px 10px;
         position: relative;
     }
