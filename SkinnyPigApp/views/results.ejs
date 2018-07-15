@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <title>Skinny Pig: Keeping Your Piggy Bank Fat!</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/skinnypigcss.css">
+    <link href="https://fonts.googleapis.com/css?family=Esteban|Oswald:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Galada|Wendy+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="KuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <body>
+
+        <nav class="navbarMain navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="header">
+                        <a href="/">
+                            <img class="headerLogo" src="/images/skinnyPigLogo.png">
+                        </a>
+                        <a href="/">
+                            <h1 class="logoBrand">Skinny Pig Deals</h1>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <!-- <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li> -->
+                        <li>
+                            <a href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Daily Deals</a>
+                                </li>
+                                <li>
+                                    <a href="skinnyPigCategoryPage.html">Television</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cameras</a>
+                                </li>
+                                <li>
+                                    <a href="#">Technology</a>
+                                </li>
+                                <li>
+                                    <a href="#">Computers</a>
+                                </li>
+                                <li>
+                                    <a href="#">Clothing</a>
+                                </li>
+                                <li>
+                                    <a href="#">Video Games</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+
+        <div>
+            <form class="navbar-form container" action="/results" method="get">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search for Skinny Pig Deals..." name="search">
+                    <button type="submit" class="floatRight btn btn-default">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="headerContainer">
+            <img class="headerimg" src="/images/farm.png">
+        </div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="productBox">
+                        <h3 class="categoryTitle">Search Results</h3>
+                        <div class="row">
+
+                            <% data.findItemsAdvancedResponse[0].searchResult[0].item.forEach(function(product) {
+
+		%>
+
+                                <div class="col-xs-6 col-md-3">
+                                    <div class="productThumbnail">
+                                        <div class="productTitle">
+                                            <%=product.title%>
+                                        </div>
+                                        <img src= <%=product.galleryURL %> alt="..." class="center-block">
+                                        <div class="caption">
+                                            <div class="price">$
+                                                <%=parseFloat(product.sellingStatus[0].currentPrice[0].__value__.toString()).toFixed(2)%>
+                                            </div>
+                                            <p>
+                                                <a href=<%=product.viewItemURL%> class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <%  }) %>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>
+                <a href="https://twitter.com/SkinnyPigDeals">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-facebook-square"></i>
+                    </i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="/js/bootstrap.js"></script>
+
+
+
+    </body>
+
+
+
+
+</html>
