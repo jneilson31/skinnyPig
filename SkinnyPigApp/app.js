@@ -41,11 +41,8 @@ switch(req.params.categoryName) {
     case "home":
         catID = 11700;
     break;
-    case "apparel":
+    case "clothing":
         catID = 11450;
-    break;
-    case "technology":
-        catID = 293;
     break;
     case "cameras":
         catID = 625;
@@ -58,9 +55,6 @@ switch(req.params.categoryName) {
     break;
     case "baby":
         catID = 2984;
-    break;
-    case "entertainment":
-        catID = 888;
     break;
     case "travel":
         catID = 3252;
