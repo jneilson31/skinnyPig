@@ -11,6 +11,8 @@
 	 crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+</head>
+
 	<body>
 
 		<nav class="navbarMain navbar-default">
@@ -115,7 +117,7 @@
 							<div class="productTitle">
 								<%=data.items[0].title%>
 							</div>
-							<img id="dealofDayImage" src=<%=data.items[0].imageUrl %> alt="...">
+							<img id="dealofDayImage" src="<%=data.items[0].imageUrl%>" alt="...">
 							<div class="caption">
 								<div class="dealofDayPrice">
 									<span class="dealOfDayOldPrice">
@@ -124,7 +126,7 @@
 									<%=data.items[0].price.toFixed(2)%>
 								</div>
 								<p>
-									<a href="#" class="btn dealBtn-Primary" role="button">View Deal</a>
+									<a href= "<%=data.items[0].viewItemURL%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
 								</p>
 							</div>
 						</div>
@@ -155,7 +157,7 @@
 										<div class="price">
 											<span class="oldPrice"><%=data.items[i].originPrice%></span>$<%=data.items[i].price.toFixed(2)%></div>
 										<p>
-											<a href="#" class="btn dealBtn-Primary" role="button">View Deal</a>
+											<a href= "<%=data.items[i].viewItemURL %>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
 										</p>
 									</div>
 								</div>

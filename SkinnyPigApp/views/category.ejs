@@ -11,6 +11,8 @@
         crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+</head>
+
     <body>
 
         <nav class="navbarMain navbar-default">
@@ -112,13 +114,13 @@
                                         <div class="productTitle">
                                             <%=product.title%>
                                         </div>
-                                        <img src= <%=product.galleryURL %> alt="..." class="center-block">
+                                        <img src= "<%=product.galleryURL%>" alt="..." class="center-block">
                                         <div class="caption">
                                             <div class="price">$
                                                 <%=parseFloat(product.sellingStatus[0].currentPrice[0].__value__.toString()).toFixed(2)%>
                                             </div>
                                             <p>
-                                                <a href=<%=product.viewItemURL%> class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
+                                                <a href= "<%=product.viewItemURL%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
                                             </p>
                                         </div>
                                     </div>

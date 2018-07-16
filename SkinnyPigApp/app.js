@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {
-    var request = require('request');
+
     request('https://epndeals.api.ebay.com/epndeals/v1?marketplace=us&campaignid=5338330297&toolid=100034&rotationId=711-53200-19255-0&type=DAILY&format=json', function (error, response, body) {
 
         if (!error && response.statusCode === 200) {
@@ -56,7 +56,7 @@ switch(req.params.categoryName) {
     case "health-and-beauty":
         catID = 26395;
     break;
-    case "children":
+    case "baby":
         catID = 2984;
     break;
     case "entertainment":
@@ -68,8 +68,8 @@ switch(req.params.categoryName) {
     default:
         catID = 99;
 }
-
-    request('http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByCategory&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&categoryId=' + catID + '&paginationInput.entriesPerPage=24&itemFilter(0).name=ListingType%20&itemFilter(0).value(0)=AuctionWithBIN&itemFilter(0).value(1)=FixedPrice&itemFilter(0).value(2)=StoreInventory', function (error, response, body) {
+    var url = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByCategory&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&categoryId=" + catID + "&paginationInput.entriesPerPage=24&itemFilter(0).name=ListingType%20&itemFilter(0).value(0)=AuctionWithBIN&itemFilter(0).value(1)=FixedPrice&itemFilter(0).value(2)=StoreInventory";
+    request(url, function (error, response, body) {
 
         if (!error && response.statusCode === 200) {
             var data = JSON.parse(body);
