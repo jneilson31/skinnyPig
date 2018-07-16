@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,6 +10,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="KuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
 
     <body>
 
@@ -111,13 +114,13 @@
                                         <div class="productTitle">
                                             <%=product.title%>
                                         </div>
-                                        <img src= <%=product.galleryURL %> alt="..." class="center-block">
+                                        <img src= "<%=product.galleryURL%>" alt="..." class="center-block">
                                         <div class="caption">
                                             <div class="price">$
                                                 <%=parseFloat(product.sellingStatus[0].currentPrice[0].__value__.toString()).toFixed(2)%>
                                             </div>
                                             <p>
-                                                <a href=<%=product.viewItemURL%> class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
+                                                <a href= "<%=product.viewItemURL%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
                                             </p>
                                         </div>
                                     </div>

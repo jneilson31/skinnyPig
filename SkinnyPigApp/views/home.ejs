@@ -11,6 +11,8 @@
 	 crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+</head>
+
 	<body>
 
 		<nav class="navbarMain navbar-default">
@@ -29,6 +31,7 @@
 					</a>
 				</div>
 
+
 				<div>
 					<form class="navbar-form" action="results" method="get">
 						<div class="container">
@@ -44,6 +47,7 @@
 					<ul class="nav navbar-nav navbarMobile hidden-lg">
 						<li class="dropdownSelections">
 							<a href="#"><i class="fa fa-home dropdownIcons" aria-hidden="true"></i> Home</a>
+
 						</li>
 						<li class="dropdownSelections">
 							<a href="#"><i class="fa fa-list-ul dropdownIcons" aria-hidden="true"></i> Categories</a>
@@ -63,37 +67,37 @@
 						<a href="#">Featured Deals</a>
 					</li>
 					<li>
-						<a href="#">Video Games</a>
+						<a href="/category/video-games">Video Games</a>
 					</li>
 					<li>
-						<a href="#">TV</a>
+						<a href="/category/tv">TV</a>
 					</li>
 					<li>
-						<a href="#">Computers</a>
+						<a href="/category/computers">Computers</a>
 					</li>
 					<li>
-						<a href="#">Outdoors</a>
+						<a href="/category/outdoors">Outdoors</a>
 					</li>
 					<li>
-						<a href="#">Home & Garden</a>
+						<a href="/category/home-and-garden">Home & Garden</a>
 					</li>
 					<li>
-						<a href="#">Clothing</a>
+						<a href="/category/clothing">Clothing</a>
 					</li>
 					<li>
-						<a href="#">Cameras</a>
+						<a href="/category/cameras">Cameras</a>
 					</li>
 					<li>
-						<a href="#">Auto</a>
+						<a href="/category/auto">Auto</a>
 					</li>
 					<li>
-						<a href="#">Health & Beauty</a>
+						<a href="/category/health-and-beauty">Health & Beauty</a>
 					</li>
 					<li>
-						<a href="#">Baby</a>
+						<a href="/category/baby">Baby</a>
 					</li>
 					<li>
-						<a href="#">Travel</a>
+						<a href="/category/travel">Travel</a>
 					</li>
 				</ul>
 				<!-- /.navbar-collapse -->
@@ -113,7 +117,7 @@
 							<div class="productTitle">
 								<%=data.items[0].title%>
 							</div>
-							<img id="dealofDayImage" src=<%=data.items[0].imageUrl %> alt="...">
+							<img id="dealofDayImage" src="<%=data.items[0].imageUrl%>" alt="...">
 							<div class="caption">
 								<div class="dealofDayPrice">
 									<span class="dealOfDayOldPrice">
@@ -122,7 +126,7 @@
 									<%=data.items[0].price.toFixed(2)%>
 								</div>
 								<p>
-									<a href="#" class="btn dealBtn-Primary" role="button">View Deal</a>
+									<a href="<%=data.items[0].itemUrl%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
 								</p>
 							</div>
 						</div>
@@ -140,10 +144,10 @@
 
 				<% for (i = 1; i < data.items.length; i++) {
 							
-			if (data.items[i].price != null && data.items[i].price != "" && data.items[i].originPrice != null && data.items[i].originPrice != "") {
+			if (data.items[i].price != null && data.items[i].price != "" && data.items[i].originPrice != null && data.items[i].originPrice != "") { %>
 				
 			
-			%>
+			
 
 							<div class="col-xs-6 col-md-3">
 								<div class="productThumbnail">
@@ -153,7 +157,7 @@
 										<div class="price">
 											<span class="oldPrice"><%=data.items[i].originPrice%></span>$<%=data.items[i].price.toFixed(2)%></div>
 										<p>
-											<a href="#" class="btn dealBtn-Primary" role="button">View Deal</a>
+											<a href="<%=data.items[i].itemUrl%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
 										</p>
 									</div>
 								</div>
