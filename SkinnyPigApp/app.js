@@ -19,6 +19,8 @@ app.get("/", function (req, res) {
 
     });
 
+    
+
 });
 
 app.get("/category/:categoryName", function (req, res) {

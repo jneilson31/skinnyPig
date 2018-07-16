@@ -88,7 +88,7 @@
 						<a href="/category/cameras">Cameras</a>
 					</li>
 					<li>
-						<a href="/category/auto>Auto</a>
+						<a href="/category/auto">Auto</a>
 					</li>
 					<li>
 						<a href="/category/health-and-beauty">Health & Beauty</a>
@@ -126,7 +126,7 @@
 									<%=data.items[0].price.toFixed(2)%>
 								</div>
 								<p>
-									<a href= "<%=data.items[0].viewItemURL%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
+									<a href="<%=data.items[0].itemUrl%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
 								</p>
 							</div>
 						</div>
@@ -144,10 +144,10 @@
 
 				<% for (i = 1; i < data.items.length; i++) {
 							
-			if (data.items[i].price != null && data.items[i].price != "" && data.items[i].originPrice != null && data.items[i].originPrice != "") {
+			if (data.items[i].price != null && data.items[i].price != "" && data.items[i].originPrice != null && data.items[i].originPrice != "") { %>
 				
 			
-			%>
+			
 
 							<div class="col-xs-6 col-md-3">
 								<div class="productThumbnail">
@@ -157,7 +157,7 @@
 										<div class="price">
 											<span class="oldPrice"><%=data.items[i].originPrice%></span>$<%=data.items[i].price.toFixed(2)%></div>
 										<p>
-											<a href= "<%=data.items[i].viewItemURL %>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
+											<a href="<%=data.items[i].itemUrl%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
 										</p>
 									</div>
 								</div>
