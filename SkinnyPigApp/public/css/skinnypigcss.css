@@ -136,6 +136,17 @@ font-family: 'Esteban', serif;*/
     position: relative;
 }
 
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: none;
+}
+
 .navbarMobile {
     background-color: #534741;
     background-image: url(https://i.imgur.com/40d4k2f.png);
@@ -148,7 +159,6 @@ font-family: 'Esteban', serif;*/
 .navbarSecondary {
     background-color: #edc1bf;
     color: #534741;
-    margin-bottom: 50px;
     margin-top: 0px;
     position: relative;
 }
@@ -210,13 +220,15 @@ font-family: 'Esteban', serif;*/
 }
 
 h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
-    font-size: 50%;
+    font-size: 45%;
+    color: #fff;
+    font-family: 'Esteban', serif;
 }
 
 .btn:hover, .btn:focus, .btn.focus {
-    color: white;
+    color: #534741;
     text-decoration: none;
-    background: #534741;
+    background: #edc1bf;
 }
 
 .price {
@@ -233,6 +245,9 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
     font-size: 24px;
     padding: 10px 10px 10px 5px;
     text-align: right;
+    /* float: right; */
+    /* position: relative; */
+    top: 20px;
 }
 
 .dealOfDayBtn-Primary {
@@ -242,8 +257,8 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
     font-family: 'Esteban', serif;
     font-size: 16px;
     margin: 0 auto;
-    width: 60%;
-    float: left;
+    width: 65%;
+    float: right;
 }
 
 .navbar-nav > li > a {
@@ -268,28 +283,41 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
 }
 
 .dealOfDayTitle {
-    color: #534741;
-    font-family: 'Oswald', sans-serif;
+    color: #edc1bf;
+    font-family: 'galada', sans-serif;
     margin-bottom: 20px;
     margin-top: 0px;
-    padding: 0px 0px 0px 90px;
+    padding: 15px 10px 10px 10px;
+    background: #534741;
+    border-radius: 5px;
 }
 
 .dealOfDayOldPrice {
     color: black;
-    /* float: left; */
     font-family: 'Esteban', serif;
     font-size: 14px;
     opacity: 0.8;
-    padding: 0px 10px 0px 0px;
+    padding: 0px 40px 0px 0px;
     text-decoration: line-through;
     vertical-align: text-bottom;
+}
+
+.dealOfDayThumbnail {
+    display: block;
+    padding: 30px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
 }
 
 .dealOfDayProductTitle {
     font-family: 'Esteban', serif;
     font-size: 2.0em;
-    padding: 0px 5px;
     text-align: left;
     line-height: 1.2;
     color: #534741;
@@ -362,8 +390,10 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
     transition: border .2s ease-in-out;
 }
 
-.backImg {
-    opacity: 0.6;
+.bgImg {
+    background-image: url("https://i.imgur.com/24E5Qpg.png");
+    width: 100%;
+    background-repeat: no-repeat;
 }
 
 .outer {
@@ -483,6 +513,7 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
         font-size: 12px;
         text-align: right;
         width: 100%;
+        margin-top: 10px;
     }
 
     .navbar-form .form-control {
@@ -500,13 +531,14 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
 
     .dealOfDayProductBox {
         background-color: white;
-        border-radius: 0px;
-        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-        padding: 50px 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 30px 10px;
         position: relative;
         border-top: 1px solid rgba(128,128,128,0.2);
         border-bottom: 1px solid rgba(128,128,128,0.2);
         margin-bottom: 60px;
+        margin-top: 30px;
     }
 
     .navbarMain {
@@ -535,7 +567,6 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
         background-color: #edc1bf;
         background-image: url(https://i.imgur.com/40d4k2f.png);
         position: relative;
-        margin-bottom: 20px;
     }
 
     .navbar-toggle {
@@ -565,7 +596,7 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
 
     .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
         display: block;
-        height: auto;
+        height: 200px;
         max-width: 100%;
     }
 
@@ -593,45 +624,52 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
         margin: 0 auto;
     }
 
-    .backImg {
-        opacity: 0.6;
-        position: relative;
-        right: 1150px;
-    }
-
     .dealOfDayTitle {
-        color: #534741;
-        font-family: 'Oswald', sans-serif;
+        color: #edc1bf;
+        font-family: 'galada', sans-serif;
         margin-bottom: 20px;
         margin-top: 0px;
-        padding: 0px 0px 0px 0px;
+        padding: 15px 10px 10px 10px;
+        background: #534741;
+        border-radius: 5px;
+        font-size: 28px;
     }
 
     .dealOfDayProductTitle {
         font-family: 'Esteban', serif;
-        font-size: 1.5em;
-        padding: 0px 15px;
+        font-size: 1.3em;
+        padding: 15px 20px 0px 20px;
         text-align: left;
         line-height: 1.2;
-        color: #534741
-    }
+        color: #534741;
+    }   
 
     .dealofDayPrice {
         color: green;
         font-family: 'Esteban', serif;
         font-size: 24px;
-        padding: 10px 25px 10px 5px;
-        text-align: right;
+        padding: 0px 30px 10px 5px;
+    }
+
+    .dealOfDayOldPrice {
+        color: black;
+        font-family: 'Esteban', serif;
+        font-size: 14px;
+        opacity: 0.8;
+        padding: 0px 10px 0px 0px;
+        text-decoration: line-through;
+        vertical-align: text-bottom;
     }
 
     .dealOfDayProductBox {
         background-color: white;
         position: relative;
         border-radius: 5px;
-        margin: 0px 0px 50px;
+        margin: 20px 10px 20px 10px;
         padding: 10px;
         border-top: 1px solid rgba(128, 128, 128, 0.2);
         border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     .dealOfDayBtn-Primary {
@@ -643,6 +681,16 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
         margin: 0 auto;
         width: 90%;
         margin-top: 10px;
+    }
+
+    .dealBtn-Primary {
+        background-color: #534741;
+        color: #edc1bf;
+        display: block;
+        font-family: 'Esteban', serif;
+        font-size: 16px;
+        margin: 0 auto;
+        width: 80%;
     }
 
     .logoBrand {
