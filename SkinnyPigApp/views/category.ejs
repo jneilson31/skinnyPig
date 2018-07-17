@@ -3,12 +3,18 @@
 
 <head>
     <title>Skinny Pig: Keeping Your Piggy Bank Fat!</title>
+    
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/css/skinnypigcss.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+     crossorigin="anonymous"></script>
+     <script src="/js/skinnypig.js"></script>
+     <script src="/js/bootstrap.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Esteban|Oswald:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Galada|Wendy+One" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="KuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -16,85 +22,94 @@
     <body>
 
         <nav class="navbarMain navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="header">
-                        <a href="/">
-                            <img class="headerLogo" src="/images/skinnyPigLogo.png">
-                        </a>
-                        <a href="/">
-                            <h1 class="logoBrand">Skinny Pig Deals</h1>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <!-- <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li> -->
-                        <li>
-                            <a href="#">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Daily Deals</a>
-                                </li>
-                                <li>
-                                    <a href="skinnyPigCategoryPage.html">Television</a>
-                                </li>
-                                <li>
-                                    <a href="#">Cameras</a>
-                                </li>
-                                <li>
-                                    <a href="#">Technology</a>
-                                </li>
-                                <li>
-                                    <a href="#">Computers</a>
-                                </li>
-                                <li>
-                                    <a href="#">Clothing</a>
-                                </li>
-                                <li>
-                                    <a href="#">Video Games</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">About Us</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
+			<div class="container-fluid container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#categoryDropdown"
+					 aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">
+						<img src="/images/skinnyPigNew.png">
+					</a>
+				</div>
 
 
-        <div>
-            <form class="navbar-form container" action="/results" method="get">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search for Skinny Pig Deals..." name="search">
-                    <button type="submit" class="floatRight btn btn-default">Search</button>
-                </div>
-            </form>
-        </div>
-        <div class="headerContainer">
-            <img class="headerimg" src="/images/farm.png">
-        </div>
+				<div>
+					<form class="navbar-form" action="/results" method="get">
+						<div class="container">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search for Skinny Pig Deals..." name="search">
+								<button type="submit" class="floatRight btn btn-default">Search</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="collapse navbar-collapse" id="categoryDropdown">
+					<ul class="nav navbar-nav navbarMobile hidden-lg">
+						<li class="dropdownSelections">
+							<a href="#"><i class="fa fa-home dropdownIcons" aria-hidden="true"></i> Home</a>
+
+						</li>
+						<li class="dropdownSelections">
+							<a href="#"><i class="fa fa-list-ul dropdownIcons" aria-hidden="true"></i> Categories</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<nav class="navbar navbarSecondary hidden-xs">
+			<div class="container">
+				<ul class="nav navbar-nav center-block">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Featured Deals</a>
+					</li>
+					<li>
+						<a href="/category/video-games">Video Games</a>
+					</li>
+					<li>
+						<a href="/category/tv">TV</a>
+					</li>
+					<li>
+						<a href="/category/computers">Computers</a>
+					</li>
+					<li>
+						<a href="/category/outdoors">Outdoors</a>
+					</li>
+					<li>
+						<a href="/category/home-and-garden">Home & Garden</a>
+					</li>
+					<li>
+						<a href="/category/clothing">Clothing</a>
+					</li>
+					<li>
+						<a href="/category/cameras">Cameras</a>
+					</li>
+					<li>
+						<a href="/category/auto">Auto</a>
+					</li>
+					<li>
+						<a href="/category/health-and-beauty">Health & Beauty</a>
+					</li>
+					<li>
+						<a href="/category/baby">Baby</a>
+					</li>
+					<li>
+						<a href="/category/travel">Travel</a>
+					</li>
+				</ul>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
 
 
 
@@ -110,7 +125,7 @@
 		%>
 
                                 <div class="col-xs-6 col-md-3">
-                                    <div class="productThumbnail">
+                                    <div class="productThumbnailCategory">
                                         <div class="productTitle">
                                             <%=product.title%>
                                         </div>
@@ -134,6 +149,11 @@
             </div>
         </div>
 
+        <a href="#" id="loadMore">View More Results</a>
+            <p class="totop"> 
+                <a href="#top" id="topper">Back to top</a> 
+            </p>
+
         <div class="footer">
             <div>
                 <a href="https://twitter.com/SkinnyPigDeals">
@@ -152,11 +172,12 @@
 
 
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
-        <script src="/js/bootstrap.js"></script>
+        
+        
+        
 
 
 

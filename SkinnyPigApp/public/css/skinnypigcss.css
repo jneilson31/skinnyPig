@@ -5,6 +5,30 @@ Pink:#edc1bf*/
 /*font-family: 'Oswald', sans-serif;
 font-family: 'Esteban', serif;*/
 
+#topper {
+    text-align:center;
+    display:block;
+    margin-top:10px;
+    font-size:14px
+}
+
+#loadMore {
+    text-align:center;
+    display:block;
+    margin:0 auto;
+    background-color: #EDC1BF;
+    color: black;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+    width:150px;
+    padding:10px;
+    margin-top:10px;
+    text-decoration:none;
+   
+}
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     background-color: transparent;
     color: #edc1bf;
@@ -275,6 +299,22 @@ font-family: 'Esteban', serif;*/
     margin-bottom: 10px;
     padding: 4px;
     transition: border .2s ease-in-out;
+    
+}
+
+.productThumbnailCategory {
+    -o-transition: border .2s ease-in-out;
+    -webkit-transition: border .2s ease-in-out;
+    background-color: #fff;
+    background-color: rgba(220,220,220,0.2);
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: block;
+    line-height: 1.42857143;
+    margin-bottom: 10px;
+    padding: 4px;
+    transition: border .2s ease-in-out;
+    display:none;
 }
 
 .categoryThumbnail {
@@ -303,6 +343,13 @@ font-family: 'Esteban', serif;*/
 }
 
 .productThumbnail > img, .productThumbnail a > img, .categoryThumbnail > img {
+    display: block;
+    height: 158px;
+    max-width: 100%;
+    padding: 5px;
+}
+
+.productThumbnailCategory > img, .productThumbnail a > img, .categoryThumbnail > img {
     display: block;
     height: 158px;
     max-width: 100%;
