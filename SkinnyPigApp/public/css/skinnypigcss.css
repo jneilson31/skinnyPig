@@ -148,7 +148,7 @@ font-family: 'Esteban', serif;*/
 .navbarSecondary {
     background-color: #edc1bf;
     color: #534741;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
     margin-top: 0px;
     position: relative;
 }
@@ -209,6 +209,10 @@ font-family: 'Esteban', serif;*/
     overflow: hidden
 }
 
+h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
+    font-size: 50%;
+}
+
 .btn:hover, .btn:focus, .btn.focus {
     color: white;
     text-decoration: none;
@@ -227,8 +231,19 @@ font-family: 'Esteban', serif;*/
     color: green;
     font-family: 'Esteban', serif;
     font-size: 24px;
-    padding: 10px 15px 10px 5px;
+    padding: 10px 10px 10px 5px;
     text-align: right;
+}
+
+.dealOfDayBtn-Primary {
+    background-color: #534741;
+    color: #edc1bf;
+    display: block;
+    font-family: 'Esteban', serif;
+    font-size: 16px;
+    margin: 0 auto;
+    width: 60%;
+    float: left;
 }
 
 .navbar-nav > li > a {
@@ -247,30 +262,46 @@ font-family: 'Esteban', serif;*/
     font-family: 'Esteban', serif;
     font-size: 12px;
     opacity: 0.8;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 15px;
     text-decoration: line-through;
     vertical-align: text-bottom;
+}
+
+.dealOfDayTitle {
+    color: #534741;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding: 0px 0px 0px 90px;
 }
 
 .dealOfDayOldPrice {
     color: black;
-    float: left;
+    /* float: left; */
     font-family: 'Esteban', serif;
-    font-size: 16px;
+    font-size: 14px;
     opacity: 0.8;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 10px 0px 0px;
     text-decoration: line-through;
     vertical-align: text-bottom;
 }
 
+.dealOfDayProductTitle {
+    font-family: 'Esteban', serif;
+    font-size: 2.0em;
+    padding: 0px 5px;
+    text-align: left;
+    line-height: 1.2;
+    color: #534741;
+}
+
 .productTitle {
     font-family: 'Esteban', serif;
-    font-size: 17px;
-    padding: 10px;
+    font-size: 14px;
+    padding: 5px;
     text-align: left;
-    height:100px;
-    padding-top:8%;
-    line-height:19px;
+    height: 100px;
+    line-height: 19px;
 }
 
 .productImage {
@@ -331,6 +362,15 @@ font-family: 'Esteban', serif;*/
     transition: border .2s ease-in-out;
 }
 
+.backImg {
+    opacity: 0.6;
+}
+
+.outer {
+    width: 100%;
+    overflow: hidden;
+}
+
 #categoryDropdown {
     float: left;
     width: 100%;
@@ -340,6 +380,7 @@ font-family: 'Esteban', serif;*/
     display: block;
     height: auto;
     max-width: 100%;
+    margin: 0 auto;
 }
 
 .productThumbnail > img, .productThumbnail a > img, .categoryThumbnail > img {
@@ -385,10 +426,12 @@ font-family: 'Esteban', serif;*/
 .dealOfDayProductBox {
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 10px 0px 10px 0px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    margin: 0px 0px 70px 0px;
     padding: 10px;
     position: relative;
+    border-top: 1px solid rgba(128,128,128,0.2);
+    border-bottom: 1px solid rgba(128,128,128,0.2);
 }
 
 .footer {
@@ -457,10 +500,13 @@ font-family: 'Esteban', serif;*/
 
     .dealOfDayProductBox {
         background-color: white;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 10px;
+        border-radius: 0px;
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+        padding: 50px 10px;
         position: relative;
+        border-top: 1px solid rgba(128,128,128,0.2);
+        border-bottom: 1px solid rgba(128,128,128,0.2);
+        margin-bottom: 60px;
     }
 
     .navbarMain {
@@ -489,6 +535,7 @@ font-family: 'Esteban', serif;*/
         background-color: #edc1bf;
         background-image: url(https://i.imgur.com/40d4k2f.png);
         position: relative;
+        margin-bottom: 20px;
     }
 
     .navbar-toggle {
@@ -544,6 +591,58 @@ font-family: 'Esteban', serif;*/
     .header {
         display: block;
         margin: 0 auto;
+    }
+
+    .backImg {
+        opacity: 0.6;
+        position: relative;
+        right: 1150px;
+    }
+
+    .dealOfDayTitle {
+        color: #534741;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 20px;
+        margin-top: 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .dealOfDayProductTitle {
+        font-family: 'Esteban', serif;
+        font-size: 1.5em;
+        padding: 0px 15px;
+        text-align: left;
+        line-height: 1.2;
+        color: #534741
+    }
+
+    .dealofDayPrice {
+        color: green;
+        font-family: 'Esteban', serif;
+        font-size: 24px;
+        padding: 10px 25px 10px 5px;
+        text-align: right;
+    }
+
+    .dealOfDayProductBox {
+        background-color: white;
+        position: relative;
+        border-radius: 5px;
+        margin: 0px 0px 50px;
+        padding: 10px;
+        border-top: 1px solid rgba(128, 128, 128, 0.2);
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    }
+
+    .dealOfDayBtn-Primary {
+        background-color: #534741;
+        color: #edc1bf;
+        display: block;
+        font-family: 'Esteban', serif;
+        font-size: 16px;
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 10px;
     }
 
     .logoBrand {
