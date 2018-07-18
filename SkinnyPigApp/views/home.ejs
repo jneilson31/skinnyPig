@@ -182,6 +182,41 @@
 			</div>
 		</div>
 
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="productBox">
+						<h3 class="categoryTitle">Popular Deals</h3>
+						<div class="row">
+
+				
+							<% data2.getMostWatchedItemsResponse.itemRecommendations.item.forEach(function(product) { %> 
+
+							<div class="col-xs-6 col-md-4">
+								<div class="productThumbnail">
+									<div class="productTitle"><%=product.title%></div>
+									<img src= "<%=product.imageURL%>" alt="..." class="center-block">
+									<div class="caption">
+										<div class="price">
+											$<%=parseFloat(product.buyItNowPrice.__value__.toString()).toFixed(2)%>
+										</div>
+										<p>
+											<a href="<%=product.viewItemURL %>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<% }) %>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<div class="footer">
 			<div>
 				<a href="https://twitter.com/SkinnyPigDeals">
