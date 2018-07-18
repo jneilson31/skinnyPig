@@ -1,6 +1,3 @@
-
-
-
 $(function () {
     $(".productThumbnailCategory").slice(0, 40).show();
     $("#loadMore").on('click', function (e) {
@@ -11,8 +8,6 @@ $(function () {
         }
     });
 });
-
-
 
 $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
