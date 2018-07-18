@@ -121,7 +121,7 @@
                         <div class="row">
 
                             <% data.findItemsByCategoryResponse[0].searchResult[0].item.forEach(function(product) {
-
+									if(product.galleryURL != "http:\/\/thumbs1.ebaystatic.com\/pict\/04040_0.jpg") {
 		%>
 
                                 <div class="col-xs-6 col-md-3">
@@ -141,7 +141,7 @@
                                     </div>
                                 </div>
 
-                                <%  }) %>
+                                <%  }}) %>
 
                         </div>
                     </div>
