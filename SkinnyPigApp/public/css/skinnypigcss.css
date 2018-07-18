@@ -300,6 +300,51 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
     vertical-align: text-bottom;
 }
 
+a {
+    color: #534741;
+    text-decoration: none;
+}
+
+.popularDealsImg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 15%;
+}
+
+.popularDealsRow {
+    margin-right: -5px;
+    margin-left: -5px;
+    clear: both;
+    display: table;
+    content: " ";
+
+}
+
+.popularDealsProductTitle {
+    font-family: 'Esteban', serif;
+    font-size: 14px;
+    padding: 5px;
+    text-align: left;
+    /* height: 100px; */
+    line-height: 19px;
+}
+
+.popularDealsPrice {
+    color: green;
+    font-family: 'Esteban', serif;
+    font-size: 16px;
+    padding: 0px 5px 0px 0px;
+    text-align: right;
+}
+.dealsContainer {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .dealOfDayThumbnail {
     display: block;
     padding: 30px;
@@ -445,6 +490,15 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
     margin-top:30px;
 }
 
+.productBoxMost {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    position: relative;
+    margin-top:30px;
+}
+
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
     min-height: 1px;
     padding-left: 5px;
@@ -484,6 +538,12 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
 
 /*Media Queries*/
 
+@media (min-width: 1557px) {
+    .dealsContainer {
+        width: 1537px;
+    }
+}
+
 @media screen and (min-width: 992px) {
 
     .logoBrand {
@@ -496,6 +556,10 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
         padding: 10px 15px;
         float: left;
     }
+
+    .fiveAcross {
+        width: 20%;
+    }     
 
     .headerLogo {
         float: left;
