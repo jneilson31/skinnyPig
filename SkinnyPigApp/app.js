@@ -92,6 +92,7 @@ app.get("/category/:categoryName", function (req, res) {
     ]).then(axios.spread(function (response1, response2) {
         data = response1.data;
         data2 = response2.data;
+        console.log(data2.getMostWatchedItemsResponse.itemRecommendations.item.length);
         res.render("category", { data: data, data2: data2, categoryName: categoryName });
 
     })).catch(error => {
