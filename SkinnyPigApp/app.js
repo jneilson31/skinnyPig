@@ -10,23 +10,23 @@ const axios = require('axios');
 app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {
-var data;
-var data2;
-  axios.all([
-      axios.get('https://epndeals.api.ebay.com/epndeals/v1?marketplace=us&campaignid=5338330297&toolid=100034&rotationId=711-53200-19255-0&type=DAILY&format=json'),
-      axios.get('https://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3')
-]).then(axios.spread(function (response1, response2) {
-  data = response1.data;
-  data2 = response2.data;
-  res.render("home", { data: data, data2: data2 });
-   
-})).catch(error => {
-  console.log(error);
-});
+    var data;
+    var data2;
+    axios.all([
+        axios.get('https://epndeals.api.ebay.com/epndeals/v1?marketplace=us&campaignid=5338330297&toolid=100034&rotationId=711-53200-19255-0&type=DAILY&format=json'),
+        axios.get('https://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3')
+    ]).then(axios.spread(function (response1, response2) {
+        data = response1.data;
+        data2 = response2.data;
+        res.render("home", { data: data, data2: data2 });
 
-    
+    })).catch(error => {
+        console.log(error);
+    });
 
-    
+
+
+
 
 });
 
@@ -92,7 +92,6 @@ app.get("/category/:categoryName", function (req, res) {
     ]).then(axios.spread(function (response1, response2) {
         data = response1.data;
         data2 = response2.data;
-        console.log(data2.getMostWatchedItemsResponse.itemRecommendations.item.length);
         res.render("category", { data: data, data2: data2, categoryName: categoryName });
 
     })).catch(error => {
