@@ -17,5 +17,13 @@ $(window).scroll(function () {
     }
 });
 
+function required() {
+    var empt = document.forms["searchBar"]["search"].value;
+    if (empt == "") {
+        return false;
+    }
+    return true;
+}
+
 
 
