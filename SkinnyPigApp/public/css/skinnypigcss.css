@@ -100,7 +100,8 @@ font-family: 'Esteban', serif;*/
     font-family: 'Oswald', sans-serif;
     margin-bottom: 10px;
     margin-top: 0px;
-    padding: 0px 10px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 30px;
 }
 
 .btn-default {
@@ -313,6 +314,15 @@ a {
     margin-top: 15%;
 }
 
+.popularDealsProductBox {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 20px;
+    position: relative;
+    margin: 30px 0px;
+}
+
 .popularDealsRow {
     margin-right: -5px;
     margin-left: -5px;
@@ -322,13 +332,14 @@ a {
 
 }
 
-.popularDealsProductTitle {
-    font-family: 'Esteban', serif;
-    font-size: 14px;
+.popularDealsTitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
     padding: 5px;
     text-align: left;
     /* height: 100px; */
     line-height: 19px;
+    margin: 5px -10px 10px -15px;
 }
 
 .popularDealsPrice {
@@ -360,7 +371,7 @@ a {
 
 .dealOfDayProductTitle {
     font-family: 'Esteban', serif;
-    font-size: 2.0em;
+    font-size: 1.5em;
     text-align: left;
     line-height: 1.2;
     color: #534741;
@@ -487,7 +498,7 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
     position: relative;
-    margin-top:30px;
+    margin: 30px 0px;
 }
 
 .productBoxMost {
@@ -504,6 +515,10 @@ a {
     padding-left: 5px;
     padding-right: 5px;
     position: relative;
+}
+
+.twitter-follow-button {
+    float: right;
 }
 
 .dealOfDayProductBox {
@@ -534,6 +549,11 @@ a {
 
 .footer a i:hover {
     color: white;
+}
+
+.main {
+    background-image: url("https://i.imgur.com/24E5Qpg.png");
+    background-repeat: no-repeat;
 }
 
 /*Media Queries*/
