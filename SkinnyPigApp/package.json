@@ -11,11 +11,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jneilson31/skinnyPig.git"
+    "url": "https://git.heroku.com/vast-headland-22540.git"
   },
   "author": "",
   "license": "ISC",
