@@ -116,7 +116,7 @@ app.get("/results", function (req, res) {
 });
 
 
-app.listen(3000, process.env.IP); 
+app.listen(process.env.PORT, process.env.IP); 
    
 
 
