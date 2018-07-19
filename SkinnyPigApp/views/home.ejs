@@ -125,7 +125,7 @@
 							<small>(Featured Deal)</small>
 						</h1>
 						<div class="dealOfDayProductThumbnail">
-							<div class="row">
+							<div class="row row-eq-height-sm">
 								<div class="col-sm-5">
 									<div class="dealOfDayProductTitle hidden-lg">
 										<%=data.items[0].title%>
@@ -133,20 +133,15 @@
 									<img class="img-responsive" src="<%=data.items[0].imageUrl%>" alt="...">
 								</div>
 								<div class="col-sm-7">
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="dealOfDayProductTitle hidden-xs">
-												<%=data.items[0].title%>
-											</div>
-										</div>
-										<div class="col-sm-12">
-											<div class="dealofDayPrice">
-												<span class="dealOfDayOldPrice"><%=data.items[0].originPrice%></span>$<%=data.items[0].price.toFixed(2)%>
-											</div>
-										</div>
-										<div class="col-sm-12">
-												<a href="<%=data.items[0].itemUrl%>" class="btn dealOfDayBtn-Primary" role="button" target="blank">View Deal</a>
-										</div>
+									<div class="dealOfDayProductTitle hidden-xs">
+										<%=data.items[0].title%>
+									</div>
+									<div class="dealofDayPrice">
+										<span class="dealOfDayOldPrice">
+											<%=data.items[0].originPrice%>
+										</span>$
+										<%=data.items[0].price.toFixed(2)%>
+											<a href="<%=data.items[0].itemUrl%>" class="btn dealOfDayBtn-Primary" role="button" target="blank">View Deal</a>
 									</div>
 								</div>
 								<!-- <a href="<%=data.items[0].itemUrl%>" class="btn dealBtn-Primary hidden-lg" role="button" target="blank">View Deal</a> -->
