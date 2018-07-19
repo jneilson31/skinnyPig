@@ -40,7 +40,7 @@
 					<div class="container">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Search for Skinny Pig Deals..." name="search">
-							<button type="submit" class="floatRight btn btn-default">Search</button>
+							<button type="submit" class="btn btn-default">Search</button>
 						</div>
 					</div>
 				</form>
@@ -124,7 +124,7 @@
 							<span id="pig">Pig</span> in a Poke
 							<small>(Featured Deal)</small>
 						</h1>
-						<div class="productThumbnail">
+						<div class="dealOfDayProductThumbnail">
 							<div class="row">
 								<div class="col-sm-5">
 									<div class="dealOfDayProductTitle hidden-lg">
@@ -133,15 +133,20 @@
 									<img class="img-responsive" src="<%=data.items[0].imageUrl%>" alt="...">
 								</div>
 								<div class="col-sm-7">
-									<div class="dealOfDayProductTitle hidden-xs">
-										<%=data.items[0].title%>
-									</div>
-									<div class="dealofDayPrice">
-										<span class="dealOfDayOldPrice">
-											<%=data.items[0].originPrice%>
-										</span>$
-										<%=data.items[0].price.toFixed(2)%>
-											<a href="<%=data.items[0].itemUrl%>" class="btn dealOfDayBtn-Primary" role="button" target="blank">View Deal</a>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="dealOfDayProductTitle hidden-xs">
+												<%=data.items[0].title%>
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="dealofDayPrice">
+												<span class="dealOfDayOldPrice"><%=data.items[0].originPrice%></span>$<%=data.items[0].price.toFixed(2)%>
+											</div>
+										</div>
+										<div class="col-sm-12">
+												<a href="<%=data.items[0].itemUrl%>" class="btn dealOfDayBtn-Primary" role="button" target="blank">View Deal</a>
+										</div>
 									</div>
 								</div>
 								<!-- <a href="<%=data.items[0].itemUrl%>" class="btn dealBtn-Primary hidden-lg" role="button" target="blank">View Deal</a> -->
@@ -149,6 +154,7 @@
 						</div>
 					</div>
 				</div>
+
 		
 				<!-- Most Popular Deals Section -->
 		
@@ -175,8 +181,7 @@
 												</div>
 												<div class="caption">
 													<div class="popularDealsPrice">
-														$
-														<%=parseFloat(product.buyItNowPrice.__value__.toString()).toFixed(2)%>
+														$<%=parseFloat(product.buyItNowPrice.__value__.toString()).toFixed(2)%>
 													</div>
 													<!-- <p><a href="<%=product.viewItemURL %>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a></p> -->
 												</div>
@@ -214,12 +219,14 @@
 											<%=data.items[i].title%>
 										</div>
 										<img src="<%=data.items[i].imageUrl%>" alt="..." class="center-block">
+										<div class="oldPrice hidden-lg">
+											<span class="oldPrice">
+												<%=data.items[i].originPrice%>
+											</span>
+										</div>
 										<div class="caption">
 											<div class="price">
-												<span class="oldPrice">
-													<%=data.items[i].originPrice%>
-												</span>$
-												<%=data.items[i].price.toFixed(2)%>
+												<span class="oldPrice hidden-xs"><%=data.items[i].originPrice%></span>$<%=data.items[i].price.toFixed(2)%>
 											</div>
 											<p>
 												<a href="<%=data.items[i].itemUrl%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
