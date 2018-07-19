@@ -257,6 +257,9 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
     font-size: 24px;
     padding: 10px 0px 5px 5px;
     text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .dealOfDayProductThumbnail {
@@ -664,7 +667,20 @@ a {
     
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+    .row-eq-height-sm {
+        display: flex;
+    }
+
+    Makes columns equal width as well
+
+    /* .row-eq-height-sm > div {
+        flex: 1;
+    } */
+
+}
+
+@media screen and (max-width: 768px) {    
 
     .navbar-form {
         -webkit-box-shadow: none;
@@ -764,6 +780,7 @@ a {
         font-size: 24px;
         padding: 10px 15px 5px 5px;
         text-align: right;
+        position: relative;
     }
 
     .dealOfDayOldPrice {
