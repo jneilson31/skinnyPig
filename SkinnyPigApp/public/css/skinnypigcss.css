@@ -107,13 +107,14 @@ font-family: 'Esteban', serif;*/
     font-size: 30px;
 }
 
+
 .btn-default {
     background-color: #fff;
     border-color: #ccc;
     color: #333;
     font-family: 'oswald', sans-serif;
     font-size: 15px;
-    margin-left: 5px;
+    margin-left: 3px;
 }
 
 .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
@@ -215,8 +216,6 @@ font-family: 'Esteban', serif;*/
     width: 20%;
 }
 
-.bottomPage {
-}
 
 .navbar-form .form-control {
     display: inline-block;
@@ -590,6 +589,17 @@ a {
     background-repeat: no-repeat;
 }
 
+#searchButton:focus {
+    background-color: #fff;
+    text-decoration:none;
+    color: #333;
+}
+
+#searchButton:hover {
+    background-color: #edc1bf;
+    text-decoration:none;
+}
+
 /*Media Queries*/
 
 @media (min-width: 1557px) {
@@ -672,7 +682,7 @@ a {
         display: flex;
     }
 
-    Makes columns equal width as well
+    /* Makes columns equal width as well */
 
     /* .row-eq-height-sm > div {
         flex: 1;
@@ -901,6 +911,14 @@ a {
         position: relative;
         width: auto;
     }
+
+    #searchButton:active {
+    background-color: #edc1bf;
+    text-decoration:none;
+    color: #fff;
+}
+
+    
 
 }
 
