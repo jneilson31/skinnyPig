@@ -40,8 +40,13 @@
 				<form class="navbar-form" action="/results" name="searchBar" onsubmit="return required()" method="get" >
 					<div class="container">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search for Skinny Pig Deals..." name="search">
-							<button type="submit" id="searchButton" class="btn btn-default">Search</button>
+							<!-- <input type="text" class="form-control" placeholder="Search for Skinny Pig Deals..." name="search"> -->
+							<div class="input-group">
+								<input type="text" class="form-control" name="search" placeholder="Search for Skinny Pig Deals...">
+								<span class="input-group-addon">
+									<button id="searchButton" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+								</span>
+							</div>
 						</div>
 					</div>
 				</form>
