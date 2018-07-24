@@ -14,6 +14,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Galada|Wendy+One" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="KuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
 	 crossorigin="anonymous">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -112,8 +113,48 @@
 		<!-- /.container-fluid -->
 	</nav>
 
-
-	<div class="bgImg">
+	
+	<div class="main">
+		<% if (data2.getMostWatchedItemsResponse.itemRecommendations.item.length != 0) { %>
+		
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="productBox">
+							<h3 class="categoryTitle">Most Popular Deals for
+								<%=categoryName%>
+							</h3>
+							<div class="row">
+		
+								<% data2.getMostWatchedItemsResponse.itemRecommendations.item.forEach(function(product) { %>
+		
+									<div class="col-xs-6 col-md-4">
+										<div class="productThumbnail">
+											<div class="productTitle">
+												<%=product.title%>
+											</div>
+											<img src="<%=product.imageURL%>" alt="..." class="center-block">
+											<div class="caption">
+												<div class="price">
+													$
+													<%=parseFloat(product.buyItNowPrice.__value__.toString()).toFixed(2)%>
+												</div>
+												<p>
+													<a href="<%=product.viewItemURL %>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
+												</p>
+											</div>
+										</div>
+									</div>
+									<% }) %>
+		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<% } %>
+		
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -157,43 +198,7 @@
 			<a href="#top" id="topper">Back to top</a>
 		</p>
 
-		<% if (data2.getMostWatchedItemsResponse.itemRecommendations.item.length != 0) { %>
-
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="productBox">
-							<h3 class="categoryTitle">Popular Deals for <%=categoryName%></h3>
-							<div class="row">
-
-								<% data2.getMostWatchedItemsResponse.itemRecommendations.item.forEach(function(product) { %>
-
-									<div class="col-xs-6 col-md-4">
-										<div class="productThumbnail">
-											<div class="productTitle">
-												<%=product.title%>
-											</div>
-											<img src="<%=product.imageURL%>" alt="..." class="center-block">
-											<div class="caption">
-												<div class="price">
-													$
-													<%=parseFloat(product.buyItNowPrice.__value__.toString()).toFixed(2)%>
-												</div>
-												<p>
-													<a href="<%=product.viewItemURL %>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
-												</p>
-											</div>
-										</div>
-									</div>
-									<% }) %>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<% } %>
+	
 
 				<div class="footer">
 					<div>
