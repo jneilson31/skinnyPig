@@ -1,0 +1,99 @@
+<nav class="navbarMain navbar-default">
+    <div class="container-fluid container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#categoryDropdown" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="/images/skinnyPigNew.png">
+            </a>
+        </div>
+
+
+        <div>
+            <form class="navbar-form" action="/results" name="searchBar" onsubmit="return required()" method="get">
+                <div class="container">
+                    <div class="form-group">
+                        <!-- <input type="text" class="form-control" placeholder="Search for Skinny Pig Deals..." name="search"> -->
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="search" placeholder="Search for Skinny Pig Deals...">
+                            <span class="input-group-addon">
+                                <button id="searchButton" type="submit">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="collapse navbar-collapse" id="categoryDropdown">
+            <ul class="nav navbar-nav navbarMobile hidden-lg">
+                <li class="dropdownSelections">
+                    <a href="/">
+                        <i class="fa fa-home dropdownIcons" aria-hidden="true"></i> Home</a>
+
+                </li>
+                <li class="dropdownSelections">
+                    <a href="/categorymobile">
+                        <i class="fa fa-list-ul dropdownIcons" aria-hidden="true"></i> Categories</a>
+                </li>
+                <li class="dropdownSelections">
+                    <a href="#">
+                        <i class="fa fa-info-circle dropdownIcons" aria-hidden="true"></i>
+                        </i> About Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav class="navbarSecondary hidden-xs">
+    <div class="container">
+        <ul class="nav navbar-nav center-block">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/category/video-games">Video Games</a>
+            </li>
+            <li>
+                <a href="/category/tv">TV</a>
+            </li>
+            <li>
+                <a href="/category/computers">Computers</a>
+            </li>
+            <li>
+                <a href="/category/outdoors">Outdoors</a>
+            </li>
+            <li>
+                <a href="/category/home-and-garden">Home & Garden</a>
+            </li>
+            <li>
+                <a href="/category/clothing">Clothing</a>
+            </li>
+            <li>
+                <a href="/category/cameras">Cameras</a>
+            </li>
+            <li>
+                <a href="/category/auto">Auto</a>
+            </li>
+            <li>
+                <a href="/category/health-and-beauty">Health & Beauty</a>
+            </li>
+            <li>
+                <a href="/category/baby">Baby</a>
+            </li>
+            <li>
+                <a href="/category/travel">Travel</a>
+            </li>
+        </ul>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>

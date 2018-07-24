@@ -2,116 +2,12 @@
 <html>
 
 <head>
-	<title>Skinny Pig: Keeping Your Piggy Bank Fat!</title>
-
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="/css/skinnypigcss.css">
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	 crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="/js/skinnypig.js"></script>
-	<script src="/js/bootstrap.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Esteban|Oswald:300" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Galada|Wendy+One" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="KuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-	 crossorigin="anonymous">
-	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<% include partials/headrefs %>
 </head>
 
 <body>
 
-	<nav class="navbarMain navbar-default">
-		<div class="container-fluid container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#categoryDropdown" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/">
-					<img src="/images/skinnyPigNew.png">
-				</a>
-			</div>
-
-
-			<div>
-				<form class="navbar-form" action="/results" name="searchBar" onsubmit="return required()" method="get">
-					<div class="container">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search for Skinny Pig Deals..." name="search">
-							<button type="submit" id="searchButton" class="floatRight btn btn-default">Search</button>
-						</div>
-					</div>
-				</form>
-			</div>
-
-			<div class="collapse navbar-collapse" id="categoryDropdown">
-				<ul class="nav navbar-nav navbarMobile hidden-lg">
-					<li class="dropdownSelections">
-						<a href="#">
-							<i class="fa fa-home dropdownIcons" aria-hidden="true"></i> Home</a>
-
-					</li>
-					<li class="dropdownSelections">
-						<a href="#">
-							<i class="fa fa-list-ul dropdownIcons" aria-hidden="true"></i> Categories</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<nav class="navbarSecondary hidden-xs">
-		<div class="container">
-			<ul class="nav navbar-nav center-block">
-				<li>
-					<a href="/">Home</a>
-				</li>
-				<li>
-					<a href="#">Featured Deals</a>
-				</li>
-				<li>
-					<a href="/category/video-games">Video Games</a>
-				</li>
-				<li>
-					<a href="/category/tv">TV</a>
-				</li>
-				<li>
-					<a href="/category/computers">Computers</a>
-				</li>
-				<li>
-					<a href="/category/outdoors">Outdoors</a>
-				</li>
-				<li>
-					<a href="/category/home-and-garden">Home & Garden</a>
-				</li>
-				<li>
-					<a href="/category/clothing">Clothing</a>
-				</li>
-				<li>
-					<a href="/category/cameras">Cameras</a>
-				</li>
-				<li>
-					<a href="/category/auto">Auto</a>
-				</li>
-				<li>
-					<a href="/category/health-and-beauty">Health & Beauty</a>
-				</li>
-				<li>
-					<a href="/category/baby">Baby</a>
-				</li>
-				<li>
-					<a href="/category/travel">Travel</a>
-				</li>
-			</ul>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
+	<% include partials/header %>
 
 	
 	<div class="main">
@@ -198,22 +94,8 @@
 			<a href="#top" id="topper">Back to top</a>
 		</p>
 
-	
-
-				<div class="footer">
-					<div>
-						<a href="https://twitter.com/SkinnyPigDeals">
-							<i class="fab fa-twitter-square"></i>
-						</a>
-						<a href="#">
-							<i class="fab fa-facebook-square"></i>
-							</i>
-						</a>
-						<a href="#">
-							<i class="fab fa-instagram"></i>
-						</a>
-					</div>
-				</div>
+				<% include partials/footer %>
+				
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
