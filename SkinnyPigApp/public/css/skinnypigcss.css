@@ -254,7 +254,7 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
     color: green;
     font-family: 'Esteban', serif;
     font-size: 24px;
-    padding: 10px 0px 5px 5px;
+    padding: 10px 0px 5px 0px;
     text-align: right;
     position: absolute;
     bottom: 0;
@@ -372,7 +372,7 @@ a {
     color: green;
     font-family: 'Esteban', serif;
     font-size: 16px;
-    padding: 0px 5px 0px 0px;
+    padding: 5px 5px 0px 0px;
     text-align: right;
 }
 .dealsContainer {
@@ -438,7 +438,7 @@ a {
     display: block;
     line-height: 1.42857143;
     margin-bottom: 10px;
-    padding: 10px 10px;
+    padding: 10px 10px 5px 10px;
     transition: border .2s ease-in-out;
     
 }
@@ -577,14 +577,14 @@ a {
 
 .productThumbnail > img, .productThumbnail a > img, .categoryThumbnail > img {
     display: block;
-    height: 158px;
+    height: 140px;
     max-width: 100%;
     padding: 5px;
 }
 
 .productThumbnailCategory > img, .productThumbnail a > img, .categoryThumbnail > img {
     display: block;
-    height: 158px;
+    height: 140px;
     max-width: 100%;
     padding: 5px;
 }
@@ -667,7 +667,6 @@ a {
 #searchButton {
     background: none;
     color: #534741;
-    font-size: 20px;
     border: none;
     outline: none;
 }
@@ -770,14 +769,19 @@ a {
         position: relative;
     }
     
-    .navbar-form .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
+    .navbar-form .input-group, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
         width: inherit;
     }
 
-    .navbar-form .input-group {
+    /* .navbar-form .input-group {
         display: inline-table;
         width: 335px;
         vertical-align: middle;
+    } */
+
+    .navbar-form .input-group > .form-control {
+        width: 375px;
+        float: right;
     }
     
 }
@@ -786,10 +790,11 @@ a {
     .row-eq-height-sm {
         display: flex;
     }
+   
 
-    /* Makes columns equal width as well */
+    /* Makes columns equal width as well
 
-    /* .row-eq-height-sm > div {
+    .row-eq-height-sm > div {
         flex: 1;
     } */
 
@@ -837,6 +842,33 @@ a {
 
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: white;
+    }
+
+    .navbar-form .form-group {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+        float: right;
+        margin-right: 5px;
+    }
+
+    .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
+        width: 275px;
+    }
+
+    .iPadcontainer {
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .navbar-nav > li > a {
+        color: #534741;
+        font-size: 10px;
+        position: relative;
+        display: block;
+        padding: 10px 10px;
     }
 
     .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
@@ -899,7 +931,6 @@ a {
         color: green;
         font-family: 'Esteban', serif;
         font-size: 24px;
-        padding: 10px 15px 5px 5px;
         text-align: right;
         position: relative;
     }
@@ -910,7 +941,6 @@ a {
         font-family: 'Esteban', serif;
         font-size: 14px;
         opacity: 0.8;
-        padding: 0px 0px 0px 15px;
         text-decoration: line-through;
         vertical-align: text-bottom;
     }
@@ -930,7 +960,7 @@ a {
         color: green;
         font-family: 'Esteban', serif;
         font-size: 18px;
-        padding: 10px 0px 0px 0px;
+        padding: 10px 5px 0px 0px;
         text-align: right;
     }
 
@@ -966,7 +996,7 @@ a {
         font-family: 'Esteban', serif;
         font-size: 16px;
         margin: 0 auto;
-        width: 90%;
+        width: 100%;
         float: none;
 }
 
@@ -977,7 +1007,7 @@ a {
         font-family: 'Esteban', serif;
         font-size: 16px;
         margin: 0 auto;
-        width: 100%;
+        width: 90%;
     }
 
     .productBox {
@@ -986,7 +1016,7 @@ a {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         padding: 20px;
         position: relative;
-        margin: 25px 10px;
+        margin: 20px 10px;
     }
 
     .productThumbnail {
@@ -1001,6 +1031,7 @@ a {
         margin-bottom: 10px;
         padding: 5px 10px;
         transition: border .2s ease-in-out;
+        font-size: 11px;
     }
 
     .logoBrand {
@@ -1023,18 +1054,40 @@ a {
         width: auto;
     }
 
-    /* #searchButton:active {
-        background-color: #edc1bf;
-        text-decoration:none;
-        color: #fff;
-    } */
+    .categoryTitle {
+        color: #534741;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        padding: 0px 0px 0px 0px;
+        font-size: 24px;
+    }
 
-    /* #searchButton {
-        background: none;
-        color: white;
-        font-size: 20px;
-        border: none;
-} */
+    .productThumbnailCategory > img, .productThumbnail a > img, .categoryThumbnail > img {
+        display: block;
+        height: 100px;
+        max-width: 100%;
+        padding: 5px;
+    }
+    
+    .mobilePopularDealsImg {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+
+    .popularDealsProductBox {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 10px 20px;
+        position: relative;
+        margin: 20px 0px;
+    }
+    
+    
 
     
 
