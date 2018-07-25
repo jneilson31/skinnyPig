@@ -12,7 +12,7 @@
 	<div class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-7">
+				<div class="col-xs-12 col-sm-8 col-md-8">
 					<div class="productBox">
 						<h1 class="categoryTitle">
 							<span id="pig">Pig</span> in a Poke
@@ -21,7 +21,7 @@
 						<div class="dealOfDayProductThumbnail">
 							<div class="row row-eq-height-sm">
 								<div class="col-sm-5">
-									<div class="dealOfDayProductTitle hidden-lg">
+									<div class="dealOfDayProductTitle hidden-lg hidden-sm">
 										<%=data.items[0].title%>
 									</div>
 									<img class="img-responsive" src="<%=data.items[0].imageUrl%>" alt="...">
@@ -47,10 +47,9 @@
 		
 				<!-- Most Popular Deals Section -->
 		
-				<div class="col-sm-4 col-sm-offset-1 hidden-xs">
+				<div class="col-sm-4 col-md-3 col-md-offset-1 hidden-xs">
 					<div class="popularDealsProductBox">
-						<h3 class="popularDealsTitle">Most Popular Deals<a href="https://twitter.com/SkinnyPigDeals" class="twitter-follow-button" data-show-count="false">Follow @SkinnyPigDeals</a>
-						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></h3>
+						<h3 class="popularDealsTitle">Most Popular Deals</h3>
 						<div class="row">
 		
 		
@@ -78,8 +77,9 @@
 										</div>
 									</div>
 								</div>
-								<% }) %>
-		
+							<% }) %>
+							<a href="https://twitter.com/SkinnyPigDeals" class="twitter-follow-button" data-show-count="false">Follow @SkinnyPigDeals</a>
+							<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 						</div>
 					</div>
 				</div>
@@ -102,13 +102,13 @@
 		
 		
 		
-								<div class="col-xs-6 fiveAcross">
+								<div class="col-sm-4 col-xs-6 fiveAcross">
 									<div class="productThumbnail">
 										<div class="productTitle">
 											<%=data.items[i].title%>
 										</div>
 										<img src="<%=data.items[i].imageUrl%>" alt="..." class="center-block">
-										<div class="oldPrice hidden-lg">
+										<div class="oldPrice hidden-sm hidden-lg">
 											<span class="oldPrice">
 												<%=data.items[i].originPrice%>
 											</span>
