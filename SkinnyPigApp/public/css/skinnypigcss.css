@@ -12,6 +12,7 @@ font-family: 'Esteban', serif;*/
     font-size:14px
 }
 
+
 #loadMore {
     text-align: center;
     display: block;
@@ -26,6 +27,7 @@ font-family: 'Esteban', serif;*/
     border-radius: 5px;
     border: 1px solid #534741;
 }
+
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     background-color: transparent;
@@ -784,6 +786,26 @@ a {
         float: right;
     }
     
+}
+
+@media screen and (min-width: 1200px) {
+    #listContainer {
+        position:relative;
+        left:2.5%;
+    }
+
+    li {
+        padding-left:6px;
+        padding-right:6px;
+    }
+   
+
+    /* Makes columns equal width as well
+
+    .row-eq-height-sm > div {
+        flex: 1;
+    } */
+
 }
 
 @media screen and (min-width: 768px) {
