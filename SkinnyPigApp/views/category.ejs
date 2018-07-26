@@ -17,14 +17,14 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="productBox">
-							<h3 class="categoryTitle">Trending Deals for
+							<h3 class="categoryTitle">Top Trending Deals for
 								<%=categoryName%>
 							</h3>
 							<div class="row">
 		
 								<% data2.getMostWatchedItemsResponse.itemRecommendations.item.forEach(function(product) { %>
 		
-									<div class="hidden-xs col-md-4">
+									<div class="hidden-xs col-sm-4 col-md-4">
 										<div class="productThumbnail">
 											<div class="productTitle">
 												<%=product.title%>
@@ -42,7 +42,7 @@
 										</div>
 									</div>
 
-									<div class="hidden-lg col-xs-12">
+									<div class="hidden-lg hidden-sm col-xs-12">
 										<div class="productThumbnail">
 											<div class="popularDealsRow">
 												<div class="col-xs-3">
