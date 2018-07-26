@@ -791,12 +791,12 @@ a {
 @media screen and (min-width: 1200px) {
     #listContainer {
         position:relative;
-        left:2.5%;
+        left:4.5%;
     }
 
     li {
-        padding-left:6px;
-        padding-right:6px;
+        padding-left:4px;
+        padding-right:4px;
     }
    
 
