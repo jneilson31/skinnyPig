@@ -829,6 +829,12 @@ a {
 
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
+        width: 275px;
+    }
+}
+
 @media screen and (max-width: 768px) {    
 
     .navbar-form {
@@ -880,9 +886,6 @@ a {
         margin-right: 5px;
     }
 
-    .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
-        width: 275px;
-    }
 
     .iPadcontainer {
         padding-right: 5px;
