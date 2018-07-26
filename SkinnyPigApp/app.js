@@ -13,7 +13,7 @@ app.get("/", function (req, res) {
     var data2;
     axios.all([
         axios.get('https://epndeals.api.ebay.com/epndeals/v1?marketplace=us&campaignid=5338330297&toolid=100034&rotationId=711-53200-19255-0&type=DAILY&format=json'),
-        axios.get('https://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3')
+        axios.get('http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=1249')
     ]).then(axios.spread(function (response1, response2) {
         data = response1.data;
         data2 = response2.data;
@@ -31,62 +31,63 @@ app.get("/", function (req, res) {
 
 app.get("/category/:categoryName", function (req, res) {
     var request = require('request');
-    var catID;
+    var dealsID;
+    var noDealsID;
     var categoryName;
 
     switch (req.params.categoryName) {
         case "video-games":
-            catID = 1249;
+            dealsID = 1249;
             categoryName = "Video Games"
             break;
         case "tv":
-            catID = 11071;
+            dealsID = 11071;
             categoryName = "TV"
             break;
         case "computers":
-            catID = 58058;
+            dealsID = 58058;
             categoryName = "Computers"
             break;
         case "outdoors":
-            catID = 159043;
+            dealsID = 16034;
             categoryName = "Outdoors"
             break;
         case "home-and-garden":
-            catID = 11700;
+            dealsID = 11700;
             categoryName = "Home & Garden"
             break;
         case "clothing":
-            catID = 11450;
+            dealsID = 11450;
             categoryName = "Clothing"
             break;
         case "cameras":
-            catID = 625;
-            categoryName = "Cameras"
+            dealsID = 625;
+            categoryName = "Camera"
             break;
         case "auto":
-            catID = 6000;
+            dealsID = 6000;
             categoryName = "Auto"
             break;
         case "health-and-beauty":
-            catID = 26395;
+            dealsID = 26395	
             categoryName = "Health & Beauty"
             break;
         case "baby":
-            catID = 2984;
+           dealsID = 2984;
             categoryName = "Baby"
             break;
         case "travel":
-            catID = 3252;
+           dealsID = 3252
             categoryName = "Travel"
             break;
         default:
-            catID = 99;
+            dealsID = 99;
             categoryName = "All Results"
     }
-    var categoryURL = 'http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByCategory&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&categoryId=' + catID + '&paginationInput.entriesPerPage=108&itemFilter(0).name=ListingType%20&itemFilter(0).value(0)=AuctionWithBIN&itemFilter(0).value(1)=FixedPrice&itemFilter(0).value(2)=StoreInventory';
-    var popularDealsURL = 'http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=' + catID;
+    var categoryDeals = 'https://epndeals.api.ebay.com/epndeals/v1?marketplace=us&campaignid=5338330297&categoryid=' + dealsID + '&toolid=100034&commissionable=true&rotationId=711-53200-19255-0&type=DAILY%2CWEEKLY%2CCORE&format=json';
+    var popularDealsURL = 'http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=' + dealsID;
     axios.all([
-        axios.get(categoryURL),
+        axios.get(categoryDeals),
         axios.get(popularDealsURL)
     ]).then(axios.spread(function (response1, response2) {
         data = response1.data;
