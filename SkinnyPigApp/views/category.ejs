@@ -83,22 +83,27 @@
 						</h3>
 						<div class="row">
 
-							<% data.findItemsByCategoryResponse[0].searchResult[0].item.forEach(function(product) {
-									if(product.galleryURL != "http:\/\/thumbs1.ebaystatic.com\/pict\/04040_0.jpg") {
+							<% data.items.forEach(function(product) {
+									if(product.imageUrl != "http:\/\/thumbs1.ebaystatic.com\/pict\/04040_0.jpg" && product.imageUrl != "https://ir.ebaystatic.com/pictures/aw/pics/stockimage1.jpg" && product.price != null && product.price != "" && product.originPrice != null && product.originPrice != "" ) {
 		%>
 
-								<div class="col-xs-6 fiveAcross">
-									<div class="productThumbnailCategory">
+								<div class="col-sm-4 col-xs-6 fiveAcross">
+									<div class="productThumbnail">
 										<div class="productTitle">
 											<%=product.title%>
 										</div>
-										<img src="<%=product.galleryURL%>" alt="..." class="center-block">
+										<img src="<%=product.imageUrl%>" alt="..." class="center-block">
+										<div class="oldPrice hidden-sm hidden-lg">
+											<span class="oldPrice">
+												<%=product.originPrice%>
+											</span>
+										</div>
 										<div class="caption">
-											<div class="price">$
-												<%=parseFloat(product.sellingStatus[0].currentPrice[0].__value__.toString()).toFixed(2)%>
+											<div class="price">
+												<span class="oldPrice hidden-xs"><%=product.originPrice%></span>$<%=product.price.toFixed(2)%>
 											</div>
 											<p>
-												<a href="<%=product.viewItemURL%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
+												<a href="<%=product.itemUrl%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
 											</p>
 										</div>
 									</div>
@@ -112,7 +117,7 @@
 			</div>
 		</div>
 
-		<a href="#" id="loadMore">View More Results</a>
+		
 		<p class="totop">
 			<a href="#top" id="topper">Back to top</a>
 		</p>
