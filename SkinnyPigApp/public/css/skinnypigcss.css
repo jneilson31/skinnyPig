@@ -131,7 +131,14 @@ font-family: 'Esteban', serif;*/
     outline: none;
 }
 
-.btn:hover, .btn:focus, .btn.focus {
+ .btn:focus, .btn.focus {
+    color:#edc1bf;
+}
+.btn:visited {
+    color:#edc1bf;
+}
+
+.btn:hover {
     color: #fff;
     text-decoration: none;
 }
@@ -867,7 +874,6 @@ a {
     }
 
     .navbar-form .form-group {
-        display: inline-block;
         margin-bottom: 0;
         vertical-align: middle;
         float: right;
