@@ -88,7 +88,7 @@ app.get("/category/:categoryName", function (req, res) {
     var popularDealsURL = 'http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=' + dealsID;
     axios.all([
         axios.get(categoryDeals),
-        axios.get(popularDealsURL),
+        axios.get(popularDealsURL)
     ]).then(axios.spread(function (response1, response2) {
         data = response1.data;
         data2 = response2.data;
