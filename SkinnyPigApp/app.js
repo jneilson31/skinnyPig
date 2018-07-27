@@ -13,7 +13,7 @@ app.get("/", function (req, res) {
     var data2;
     axios.all([
         axios.get('https://epndeals.api.ebay.com/epndeals/v1?marketplace=us&campaignid=5338330297&toolid=100034&rotationId=711-53200-19255-0&type=DAILY&format=json'),
-        axios.get('http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=1249')
+        axios.get('http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&&affiliate.trackingId=5338330297&affiliate.networkId=9&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=1249')
     ]).then(axios.spread(function (response1, response2) {
         data = response1.data;
         data2 = response2.data;
@@ -85,7 +85,7 @@ app.get("/category/:categoryName", function (req, res) {
             categoryName = "All Results"
     }
     var categoryDeals = 'https://epndeals.api.ebay.com/epndeals/v1?marketplace=us&campaignid=5338330297&categoryid=' + dealsID + '&toolid=100034&commissionable=true&rotationId=711-53200-19255-0&type=DAILY%2CWEEKLY%2CCORE&format=json';
-    var popularDealsURL = 'http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=' + dealsID;
+    var popularDealsURL = 'http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&&affiliate.trackingId=5338330297&affiliate.networkId=9&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=' + dealsID;
     axios.all([
         axios.get(categoryDeals),
         axios.get(popularDealsURL)
@@ -110,7 +110,7 @@ app.get("/categorymobile", function (req, res) {
 
 app.get("/results", function (req, res) {
     var query = req.query.search;
-    var url = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&keywords=" + query + "&paginationInput.entriesPerPage=108&itemFilter(0).name=ListingType%20&itemFilter(0).value(0)=AuctionWithBIN&itemFilter(0).value(1)=FixedPrice&itemFilter(0).value(2)=StoreInventory";
+    var url = "https://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&affiliate.trackingId=5338330297&affiliate.networkId=9&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&keywords=" + query + "&paginationInput.entriesPerPage=108&itemFilter(0).name=ListingType%20&itemFilter(0).value(0)=AuctionWithBIN&itemFilter(0).value(1)=FixedPrice&itemFilter(0).value(2)=StoreInventory";
     request(url, function (error, response, body) {
 
         if (!error && response.statusCode === 200) {
@@ -124,7 +124,7 @@ app.get("/results", function (req, res) {
 
 
 
-app.listen(process.env.PORT, process.env.IP); 
+app.listen(3000, process.env.IP); 
    
 
 
