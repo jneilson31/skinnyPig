@@ -1,5 +1,7 @@
 var express = require("express");
+var httpsRedirect = require('express-https-redirect');
 var app = express();
+app.use('/', httpsRedirect());
 var bodyParser = require("body-parser");
 var request = require('request');
 app.use(express.static(__dirname + '/public'));
