@@ -21,6 +21,9 @@
 
 							<% data.findItemsAdvancedResponse[0].searchResult[0].item.forEach(function(product) {
 									if(product.galleryURL != "http:\/\/thumbs1.ebaystatic.com\/pict\/04040_0.jpg") {
+										var secureURL = product.galleryURL.toString().replace("http", "https");
+										
+										
 		%>
 
 								<div class="col-xs-6 col-md-3">
@@ -28,7 +31,7 @@
 										<div class="productTitle">
 											<%=product.title%>
 										</div>
-										<img src="<%=product.galleryURL%>" alt="..." class="center-block">
+										<img src="<%=secureURL%>" alt="..." class="center-block">
 										<div class="caption">
 											<div class="price">$
 												<%=parseFloat(product.sellingStatus[0].currentPrice[0].__value__.toString()).toFixed(2)%>
