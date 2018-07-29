@@ -110,6 +110,11 @@ app.get("/categorymobile", function (req, res) {
 
 });
 
+app.get("/sitemap.xml", function (req, res) {
+    res.set('Content-Type', 'application/xml');
+    res.render('sitemap');
+})
+
 app.get("/results", function (req, res) {
     var query = req.query.search;
     var url = "https://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&affiliate.trackingId=5338330297&affiliate.networkId=9&version=517&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&keywords=" + query + "&paginationInput.entriesPerPage=108&itemFilter(0).name=ListingType%20&itemFilter(0).value(0)=AuctionWithBIN&itemFilter(0).value(1)=FixedPrice&itemFilter(0).value(2)=StoreInventory";
@@ -142,7 +147,7 @@ app.get("*", function (req, res) {
 
 
 
-app.listen(process.env.PORT, process.env.IP); 
+app.listen(3000, process.env.IP); 
    
 
 
