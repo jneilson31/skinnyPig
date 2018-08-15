@@ -12,6 +12,16 @@ font-family: 'Esteban', serif;*/
     font-size:14px
 }
 
+.noResults {
+    text-align:center;
+    padding-top:150px;
+}
+
+.noContent {
+    height:590px;
+    background-color:white;
+}
+
 
 #loadMore {
     text-align: center;

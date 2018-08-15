@@ -18,6 +18,14 @@
 						<h3 class="categoryTitle">Search Results for "
 							<%=query%>"</h3>
 						<div class="row">
+							
+<% if (data.findItemsAdvancedResponse[0].searchResult[0].item === undefined || data.findItemsAdvancedResponse[0].searchResult[0].item.length == 0) { 
+	shouldShow = false; %>
+	<div class="noContent">
+		<h3 class="noResults">No Results Found </h3>
+	</div>
+	
+ <% } else { %>
 
 							<% data.findItemsAdvancedResponse[0].searchResult[0].item.forEach(function(product) {
 									if(product.galleryURL != "http:\/\/thumbs1.ebaystatic.com\/pict\/04040_0.jpg") {
@@ -43,7 +51,7 @@
 									</div>
 								</div>
 
-								<%  }}) %>
+								<%  }})} %>
 
 						</div>
 					</div>
@@ -51,10 +59,13 @@
 			</div>
 		</div>
 
+		<% if(shouldShow) { %>
 		<a href="#" id="loadMore">View More Results</a>
 		<p class="totop">
 			<a href="#top" id="topper">Back to top</a>
 		</p>
+
+		<% } %>
 
 		<% include partials/footer %>
 	</div>
