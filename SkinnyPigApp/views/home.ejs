@@ -98,7 +98,6 @@
 						<div class="row">
 		
 							<% for (i = 1; i < data.items.length; i++) {
-									
 					if (data.items[i].price != null && data.items[i].price != "" && data.items[i].originPrice != null && data.items[i].originPrice != "") { %>
 		
 		
@@ -126,6 +125,28 @@
 									</div>
 								</div>
 								<% } } %>
+
+								<div class="col-sm-4 col-xs-6 fiveAcross">
+									<div class="productThumbnail">
+										<div class="productTitle">
+											<%= data3.items[3].name %>
+										</div>
+										<img src="<%=data3.items[3].thumbnailImage%>" alt="..." class="center-block">
+										<div class="oldPrice hidden-sm hidden-lg">
+											<span class="oldPrice">
+												<%=data3.items[3].msrp%>
+											</span>
+										</div>
+										<div class="caption">
+											<div class="price">
+												<span class="oldPrice hidden-xs"><%=data3.items[3].msrp%></span>$<%=data3.items[3].salePrice%>
+											</div>
+											<p>
+												<a href="<%=data3.items[3].productUrl%>" class="btn dealBtn-Primary" role="button" target="blank">View Deal</a>
+											</p>
+										</div>
+									</div>
+								</div>
 		
 						</div>
 					</div>

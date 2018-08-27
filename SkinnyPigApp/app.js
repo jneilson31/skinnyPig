@@ -8,18 +8,20 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 const axios = require('axios');
 
+
 app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {
     var data;
     var data2;
+    var data3;
     axios.all([
-        axios.get('https://epndeals.api.ebay.com/epndeals/v1?marketplace=us&campaignid=5338330297&toolid=100034&rotationId=711-53200-19255-0&type=DAILY&format=json'),
-        axios.get('https://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&&affiliate.trackingId=5338330297&affiliate.networkId=9&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=1249')
-    ]).then(axios.spread(function (response1, response2) {
+        getEbayOne(), getEbayTwo(), getWalmart()
+    ]).then(axios.spread(function (response1,  response2, response3) {
         data = response1.data;
         data2 = response2.data;
-        res.render("home", { data: data, data2: data2 });
+        data3 = response3.data;
+        res.render("home", { data: data, data2: data2, data3: data3 });
 
     })).catch(error => {
         console.log(error);
@@ -30,6 +32,18 @@ app.get("/", function (req, res) {
 
 
 });
+
+function getEbayOne() {
+    return axios.get('https://epndeals.api.ebay.com/epndeals/v1?marketplace=us&campaignid=5338330297&toolid=100034&rotationId=711-53200-19255-0&type=DAILY&format=json');
+}
+
+function getEbayTwo() {
+    return axios.get('https://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getMostWatchedItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=TrentonN-SkinnyPi-PRD-bc970d9ce-9ed166d5&&affiliate.trackingId=5338330297&affiliate.networkId=9&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&maxResults=3&categoryId=1249');
+}
+
+function getWalmart() {
+    return axios.get('https://api.walmartlabs.com/v1/feeds/bestsellers?apikey=x9w66tkexdfubahqn4w7ja5t');
+}
 
 app.get("/category/:categoryName", function (req, res) {
     var request = require('request');
@@ -148,7 +162,7 @@ app.get("*", function (req, res) {
 
 
 
-app.listen(process.env.PORT, process.env.IP); 
+app.listen(3000, process.env.IP); 
    
 
 
