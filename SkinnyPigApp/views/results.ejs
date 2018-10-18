@@ -19,8 +19,7 @@
 							<%=query%>"</h3>
 						<div class="row">
 							
-<% if (data.findItemsAdvancedResponse[0].searchResult[0].item == undefined || data.findItemsAdvancedResponse[0].searchResult[0].item.length == 0 || 
-data.findItemsAdvancedResponse[0].searchResult[0].item.sellingStatus == undefined ) { 
+<% if (data.findItemsAdvancedResponse[0].searchResult[0].item === undefined || data.findItemsAdvancedResponse[0].searchResult[0].item.length == 0) { 
 	shouldShow = false; %>
 	<div class="noContent">
 		<h3 class="noResults">No Results Found </h3>
